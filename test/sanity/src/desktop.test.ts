@@ -285,11 +285,6 @@ export function setup(context: TestContext) {
 	}
 
 	async function testAgentsApp(desktopEntryPoint: string, dataDir?: string) {
-		if (context.options.quality === 'stable') {
-			// Agents app is not included in stable yet.
-			return;
-		}
-
 		const test = new UITest(context, dataDir);
 		const args = ['--agents'];
 		if (!dataDir) {
